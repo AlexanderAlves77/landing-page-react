@@ -16,8 +16,7 @@ describe('<MenuLink />', () => {
     })
 
     it('should render open a new tab', () => {
-        renderTheme(<MenuLink link="http://localhost" newTab={false}>Children</MenuLink>)
-        expect(screen.getByRole('link', { name: 'Children' }))
-            .toMatchInlineSnapshot()
+        const {container} = renderTheme(<MenuLink link="http://localhost" newTab={false}>Children</MenuLink>)
+        expect(container.firstChild).toMatchInlineSnapshot()
     })
 })
