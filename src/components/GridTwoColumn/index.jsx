@@ -4,7 +4,7 @@ import { SectionBackground } from '../SectionBackground'
 import { Heading } from '../Heading'
 import { TextComponent } from '../TextComponent'
 
-export const GridTwoColumn = ({ title, text, srcImg, background }) => {
+export const GridTwoColumn = ({ title, text, srcImg, background = false }) => {
     return (
         <SectionBackground background={background}>
             <Styled.Container background={background}>
