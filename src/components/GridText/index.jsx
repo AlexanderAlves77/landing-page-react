@@ -8,7 +8,7 @@ export const GridText = ({ title, description, grid, background = false }) => {
     return (
         <SectionBackground background={background}>
             <Styled.Container>
-                <Heading size="huge" uppercase colorDark={!background}>
+                <Heading size="huge" uppercase colorDark={!background} as="h2">
                     {title}
                 </Heading>
                 <TextComponent>{description}</TextComponent>
@@ -16,7 +16,7 @@ export const GridText = ({ title, description, grid, background = false }) => {
                 <Styled.Grid>
                     {grid.map(el => (
                         <Styled.GridElement key={el.title}>
-                            <Heading size="medium" colorDark={!background}>
+                            <Heading size="medium" colorDark={!background} as="h3">
                                 {el.title}
                             </Heading>
                             <TextComponent>{el.description}</TextComponent>
